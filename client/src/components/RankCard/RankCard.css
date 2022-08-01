@@ -1,0 +1,47 @@
+.cardContainer {
+  width: 30vw;
+  height: 50vh;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 10px;
+  background-color: white;
+
+  padding: 1rem;
+}
+
+.rankTitle {
+  margin-top: 2vh;
+}
+
+.rank {
+  font-size: 30px;
+  margin-top: 1vh;
+}
+
+.btnGroup {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  max-height: 10vw;
+  justify-content: center;
+  align-items: stretch;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+.btn {
+  padding: 0.3rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(90, 181, 238);
+  transform: scale(1.05);
+}
