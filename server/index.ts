@@ -37,7 +37,7 @@ function calculateRank(score) {
 }
 
 app.get("/words", (req, res) => {
-  res.send(getRandomWords(jsonData.wordList));
+  res.send({ words: getRandomWords(jsonData.wordLists) });
 });
 
 app.post("/rank", jsonParser, (req, res) => {
