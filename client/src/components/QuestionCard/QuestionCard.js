@@ -3,11 +3,12 @@ import React from 'react';
 
 import './QuestionCard.css';
 
-const QuestionCard = props => {
+const QuestionCard = ({ QuestionEnd, GameScore }) => {
     const [data, setData] = React.useState(null);
     const [currentQuestion, setCurrentQuestion] = React.useState(0);
     const [score, setScore] = React.useState(1);
     const [isWrong, setIsWrong] = React.useState(false);
+
 
     React.useEffect(() => {
         fetch("/words")
@@ -15,23 +16,27 @@ const QuestionCard = props => {
             .then((data) => setData(data.words));
     }, []);
 
-    console.log(data);
+
+
 
     const answerButtonClick = (answer) => {
         if (data[currentQuestion].pos === answer) {
+
             const newScore = score + 1
             setScore(newScore);
+
+            console.log("score: ", score, "/10", "right answer", data[currentQuestion].pos);
             switchQuestion();
         } else {
             setIsWrong(true);
             setTimeout(() => {
                 setIsWrong(false)
                 switchQuestion();
-            }, 1000)
+            }, 500)
 
         }
 
-        console.log(score);
+
 
 
     };
@@ -41,7 +46,12 @@ const QuestionCard = props => {
         if (currentQuestion < 9) {
             const nextQuestion = currentQuestion + 1;
             setCurrentQuestion(nextQuestion);
+
         } else {
+            QuestionEnd(true)
+            GameScore(score)
+
+
 
         }
 
@@ -53,6 +63,7 @@ const QuestionCard = props => {
 
 
     return (
+
         <div className='cardContainer'>
 
             <h5 className='qNo'>Question {currentQuestion + 1}/10</h5>
@@ -68,6 +79,7 @@ const QuestionCard = props => {
 
 
         </div>
+
 
     );
 };

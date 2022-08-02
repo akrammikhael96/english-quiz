@@ -9,6 +9,10 @@
   padding: 1rem;
 }
 
+.img {
+  width: 25vw;
+}
+
 .rankTitle {
   margin-top: 2vh;
 }
@@ -19,7 +23,7 @@
 }
 
 .btnGroup {
-  margin-top: 10vh;
+  margin-top: 6vh;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
