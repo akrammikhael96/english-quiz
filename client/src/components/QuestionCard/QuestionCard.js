@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 
 import './QuestionCard.css';
@@ -66,7 +67,8 @@ const QuestionCard = ({ QuestionEnd, GameScore }) => {
 
         <div className='cardContainer'>
 
-            <h5 className='qNo'>Question {currentQuestion + 1}/10</h5>
+            <ProgressBar animated now={(currentQuestion + 1) * 10} />
+            <h6 className='qNo'>Question {currentQuestion + 1}/10</h6>
 
             <h3 style={{ color: isWrong ? 'red' : '' }} className='word'>{!data ? "Loading..." : data[currentQuestion]["word"]}</h3>
 
