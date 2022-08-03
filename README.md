@@ -9,7 +9,7 @@ npm install
 Install all the required dependencies
 
 ```bash
-npm startServer
+npm run startServer
 ```
 
 Runs the server.
@@ -22,7 +22,13 @@ cd client
 ```
 
 ```bash
-npm startReact
+npm install
+```
+
+Install all the required dependencies
+
+```bash
+npm run startReact
 ```
 
 Runs the react app.
