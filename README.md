@@ -1,5 +1,9 @@
 # english-quiz
 
+### `npm install`
+
+Install all the required dependencies
+
 ### `npm startServer`
 
 Runs the server.
