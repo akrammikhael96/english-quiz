@@ -10,7 +10,7 @@ const QuestionCard = ({ QuestionEnd, GameScore }) => {
     const [score, setScore] = React.useState(1);
     const [isWrong, setIsWrong] = React.useState(false);
 
-
+    // gets the random 10 words from the server
     React.useEffect(() => {
         fetch("/words")
             .then((res) => res.json())

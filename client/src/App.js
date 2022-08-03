@@ -12,7 +12,7 @@ function App() {
   const [finalScore, setFinalScore] = React.useState(0);
 
   const QuestionEnd = bool => {
-    // 👇️ take parameter passed from Child component
+
     setQuestionsEnd(bool);
   };
 

@@ -7,6 +7,7 @@ import congratulations from '../../congratulations.jpeg';
 const RankCard = props => {
     const [finalRank, setFinalRank] = React.useState(0);
 
+    // post final score to rank endpoint and get the rank response
     React.useEffect(() => {
 
         fetch('/rank', {
